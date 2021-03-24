@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class ReceiptFilter extends Component {
@@ -14,6 +13,7 @@ class ReceiptFilter extends Component {
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Filter Criteria</Form.Label>
                 <Form.Control as="select" >
+                  <option value={"name"}>Name</option>
                   <option value={"email"}>Email</option>
                   <option value={"phone"}>Phone</option>
                   <option value={"receiptNum"}>Receipt Number</option>

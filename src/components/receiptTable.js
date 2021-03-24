@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
 
-import { Table } from 'react-bootstrap';
-import { Card } from "react-bootstrap";
+import Table from 'react-bootstrap/Table';
+import Card from "react-bootstrap/Card";
+import Moment from 'moment';
 
 class ReceiptTable extends Component {
   render() {
 
-/*     const rows = posts.map(p => (
-      <tr key={p.id}>
-          <td>{p.title}</td>
-          <td>{p.page}</td>
+    const receipts = this.props.receipts.Items;
+
+    const rows = receipts.map(p => (
+      <tr key={p.ID}>
           <td>
-              {Moment(p.createdAt).format('MM-DD-YYYY')}
+            {Moment(p.PurchaseDate).format('MM-DD-YYYY')}
           </td>
-          <td><input type='checkbox'></input></td>
+          <td>{JSON.parse(p.Name)}</td>
+          <td>{JSON.parse(p.Email)}</td>
+          <td>{JSON.parse(p.Phone)}</td>
+          <td>{JSON.parse(p.ReceiptNumber)}</td>
+          <td>{JSON.parse(p.ReceiptTotal)}</td>
+          <td><button>View</button></td>
       </tr>
-    )); */
+    ));
 
     return (
       <div className="App">
         <Card>
+          <Card.Title></Card.Title>
           <Card.Body>
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" variant="dark">
               <thead>
                 <tr>
                   <th>Date</th>
@@ -34,15 +41,7 @@ class ReceiptTable extends Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>03-21-21</td>
-                  <td>Ryan Kelley</td>
-                  <td>rkelleyfx@gmail.com</td>
-                  <td>818-653-5213</td>
-                  <td>NKPDX-032121-421</td>
-                  <td>$212.50</td>
-                  <td>x</td>
-                </tr>
+                {rows}
               </tbody>
             </Table>
           </Card.Body>
