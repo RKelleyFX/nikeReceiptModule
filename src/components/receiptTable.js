@@ -7,7 +7,7 @@ import Moment from 'moment';
 class ReceiptTable extends Component {
   render() {
 
-    const receipts = this.props.receipts.Items;
+    const receipts = this.props.receipts;
 
     const rows = receipts.map(p => (
       <tr key={p.ID}>
