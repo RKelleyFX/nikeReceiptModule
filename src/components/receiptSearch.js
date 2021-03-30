@@ -39,8 +39,8 @@ class ReceiptSearch extends Component {
     return (
       <div className="App">
         <ReceiptCard />
-        <button onClick={this.viewInput}>Receipt Input</button>
-        {viewComp}
+        {/* <button onClick={this.viewInput}>Receipt Input</button>
+        {viewComp} */}
       </div>
     );
   }

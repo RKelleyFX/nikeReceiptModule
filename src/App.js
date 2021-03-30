@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Nike POS Receipt Search</h1>
-          <img src={logo} height='100' alt='NikeLogo'/>
+          <h1>Receipt Filtering Component</h1>
+          {/* <img src={logo} height='100' alt='NikeLogo'/> */}
           <ReceiptSearch />
         </header>
       </div>
